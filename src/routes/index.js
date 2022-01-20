@@ -1,7 +1,8 @@
 const {Router} = require('express');
-const router = Router();
 const sql = require("mssql");
+const router = Router();
 
+// Use a custom connection string from Azure App Service -> App Settings -> CUSTOMCONNSTR_<ConnectionStringName>
 var sqlConnString = process.env.CUSTOMCONNSTR_customscript1;
 
 async function getPersonas () {
